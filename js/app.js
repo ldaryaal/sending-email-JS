@@ -38,8 +38,8 @@ function submitForm(e) {
 
   //make second spinner
   const sendEmailImg = document.createElement("img");
-  sendEmailImg.src = "..imgmail.gif";
-  sendEmailImg.style.display = "none";
+  sendEmailImg.src = "../img/mail.gif";
+  sendEmailImg.style.display = "block";
   // console.log(sendEmailImg)
 
   //show the image after spinner
