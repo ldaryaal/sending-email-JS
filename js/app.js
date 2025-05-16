@@ -31,6 +31,11 @@ function validateField() {
     // console.log(this)
 
     validateLength(this)
+
+    // validate email field
+    if (this.type === 'email') {
+        validateEmail(this)
+    }
      
 }
 
@@ -45,8 +50,24 @@ function validateLength(field) {
         // console.log("false")
         field.style.borderBottomColor = "red"
         field.classList.add("error")
-    }
+    }  
+}
 
+//validate email field contains @ or not
+function validateEmail(email) {
+    // console.log(email)
+    const emailText = email.value 
+    if ( emailText.includes("@")){
+        // console.log("true")
+        email.style.borderBottomColor = "green"
+        email.classList.remove("error")
+    } else {
+        // console.log("false")
+        email.style.borderBottomColor = "red"
+        email.classList.add("error")
+    }  
     
 }
+
+
 
